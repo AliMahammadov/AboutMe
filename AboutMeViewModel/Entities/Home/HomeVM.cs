@@ -8,6 +8,6 @@ namespace AboutMeViewModel.Entities.Home
 {
     public class HomeVM
     {
-        public ICollection<HomeVM> List { get; set; }
+        public ICollection<ContactVM> List { get; set; }
     }
 }

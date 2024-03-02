@@ -12,9 +12,12 @@
 
   <ItemGroup>
     <PackageReference Include="MailKit-On-NETCore" Version="2.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AboutMeData\AboutMeData.csproj" />
     <ProjectReference Include="..\AboutMeService\AboutMeService.csproj" />
     <ProjectReference Include="..\AboutMeViewModel\AboutMeViewModel.csproj" />
   </ItemGroup>

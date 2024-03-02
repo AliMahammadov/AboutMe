@@ -1,7 +1,9 @@
-﻿namespace AboutMeService.Services.Abstraction
+﻿using AboutMeViewModel.Entities;
+
+namespace AboutMeService.Services.Abstraction
 {
     public interface IEmailService
     {
-        void Send(string mailTo, string subject, string body, bool isBodyHtml = false);
+        void Send(ContactVM contact, string mailTo, string subject, string body,string name,string surname ,bool isBodyHtml = false);
     }
 }

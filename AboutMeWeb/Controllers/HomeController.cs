@@ -1,5 +1,9 @@
 using AboutMeService.Services.Abstraction;
+using AboutMeViewModel.Entities;
+using AboutMeViewModel.Entities.Home;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.DotNet.Scaffolding.Shared.Messaging;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 
 namespace AboutMeWeb.Controllers
 {
@@ -12,13 +16,17 @@ namespace AboutMeWeb.Controllers
             this.service = service;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(ContactVM contact)
         {
+            service.Send(contact, "tu6hwwz7l@code.edu.az", "Test1", "mesajin ozu", "dd", "d4");
             return View();
         }
-        public async Task<IActionResult> SendMail()
+        [HttpGet]
+        public IActionResult Contact() => View();
+        [HttpPost]
+        public async Task<IActionResult> Contact(ContactVM contact)
         {
-            service.Send("tu6hwwz7l@code.edu.az", "Test1", "mesajin ozu");
+           
             return View();
         }
 

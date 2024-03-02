@@ -1,8 +1,8 @@
-﻿@using AboutMeViewModel.Entities.Home
+﻿﻿@using AboutMeViewModel.Entities.Home
 @{
     ViewData["Title"] = "Home Page";
 }
-@model HomeVM
+@model ContactVM
 
 <!DOCTYPE html>
 <html lang="en">
@@ -435,15 +435,32 @@
                     </div>
 
                     <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                        <form id="connect" class="contact-form" id="contact-form-data" method="post">
+                            <div class="row">
+                            <div class="form-group">
+                                <input asp-for="Email" class="form-control" placeholder="Your Email" required="required">
+                                <span asp-validation-for="Email" style="color:red;"></span>
+                            </div>
+                            <div class="form-group">
+                                <textarea asp-for="Message" class="form-control" placeholder="Təklif və ya şikayət" rows="7" required="required"></textarea>
+                                <span asp-validation-for="Message" style="color:red;"></span>
+                            </div>
+                            <div class="my-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                            </div>
+                            <div class="text-center"><button type="submit">Send Message</button></div>
+                        </form>
+                       @*  <form  method="post" role="form" class="php-email-form">
                             <div class="row">
                                 <div class="form-group col-md-6">
                                     <label for="name">Your Name</label>
-                                    <input type="text" name="name" class="form-control" id="name" required>
+                                    <input asp-for="Name" type="text" name="name" class="form-control" id="name" required>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="name">Your Email</label>
-                                    <input type="email" class="form-control" name="email" id="email" required>
+                                    <input asp-for="Name" type="email" class="form-control" name="email" id="email" required>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -460,7 +477,7 @@
                                 <div class="sent-message">Your message has been sent. Thank you!</div>
                             </div>
                             <div class="text-center"><button type="submit">Send Message</button></div>
-                        </form>
+                        </form> *@
                     </div>
 
                 </div>

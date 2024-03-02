@@ -15,4 +15,8 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.0-preview.1.24080.9" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AboutMeViewModel\AboutMeViewModel.csproj" />
+  </ItemGroup>
+
 </Project>
