@@ -21,14 +21,7 @@ namespace AboutMeWeb.Controllers
             service.Send(contact, "tu6hwwz7l@code.edu.az", "Test1", "mesajin ozu", "dd", "d4");
             return View();
         }
-        [HttpGet]
-        public IActionResult Contact() => View();
-        [HttpPost]
-        public async Task<IActionResult> Contact(ContactVM contact)
-        {
-           
-            return View();
-        }
+        
 
     }
 }
